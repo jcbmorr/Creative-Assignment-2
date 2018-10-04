@@ -1,0 +1,50 @@
+<html>
+
+  <head>
+    <title>Quote Generator</title>
+    <script
+      src="http://code.jquery.com/jquery-3.2.1.min.js">
+    </script>
+    <script>
+    const quoteOutput = document.body.querySelector('#quote');
+
+    $(document).ready(function()
+    {
+      $("#get-quote").click(function(e)
+      {
+        e.preventDefault();
+        var myURL= "http://ron-swanson-quotes.herokuapp.com/v2/quotes";
+        $.ajax(
+          {
+            url : myurl,
+            dataType : "json",
+            success : function(parsed_json)
+            {
+              quoteOutput.innerHTML = `"${data[0]}"`;
+              var everything;
+              var location =
+              everything += "<li>Location: " + location;
+              $("#quote").html(everything);
+    }
+    });
+      });
+    });
+
+    </script>
+  </head>
+
+  <body class="Content">
+    <h1>Qoute Generator</h1>
+    <h3>Steve Skoubye & Jacob Morrison</h3>
+    <h3>CS260 Section:000</h3>
+
+    <div class="div1">
+      <p>Click here for a qoute<p>
+      <button id="get-quote">Get a new quote</button>
+      <p id="quote">Getting quote...</p>
+    </div>
+
+
+  </body>
+
+</html>
