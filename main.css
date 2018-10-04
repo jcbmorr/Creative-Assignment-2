@@ -1,0 +1,27 @@
+h1
+{
+  text-align: center;
+}
+
+h3
+{
+  text-align: center;
+}
+body
+{
+    text-align: center;
+    font-family: cursive;
+    background-image: url(https://www.highreshdwallpapers.com/wp-content/uploads/2014/05/Beautiful-Mountain-Top-Sunshine.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+}
+#pupper
+{
+width: 75%;
+margin-left: auto;
+margin-right: auto;
+display: block;
+}

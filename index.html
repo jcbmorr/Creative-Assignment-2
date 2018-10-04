@@ -2,7 +2,7 @@
 
   <head>
     <link rel="stylesheet" href="main.css">
-    <title>jquerypractice</title>
+    <title>Spirit Pupper Guide</title>
     <script
       src="http://code.jquery.com/jquery-3.2.1.min.js">
     </script>
@@ -11,7 +11,7 @@
         $(document).ready(function(){
   $("#floofButton").click(function(e){
       e.preventDefault();
-      var myurl= "https://randomfox.ca/floof/";
+      var myurl= "https://random.dog/woof.json";
 
       console.log(myurl);
       $.ajax({
@@ -19,8 +19,8 @@
       dataType : "json",
           success : function(parsed_json) {
           var everything;
-          var floofImage = parsed_json['image'];
-          everything = "<img src=\"" + floofImage + "\"/>";
+          var floofImage = parsed_json['url'];
+          everything = "<img id= \"pupper\" src=\"" + floofImage + "\"/>";
           $("#floofID").html(everything);
 
       }
@@ -33,11 +33,14 @@
   </head>
 
   <body class="Content">
-    <h1>Qoute Generator</h1>
+    <h1>What's Your Spirit Pupper????</h1>
     <h3>Steve Skoubye & Jacob Morrison</h3>
-    <h3>CS260 Section:000</h3>
+    <h3>CS260</h3>
+    <div id="floofID"></div>
+        <form>Enter your name: <input type="text"></form>
     <input id="floofButton" type="submit" value="Submit"/>
-    <div id="floofID">Spirit floof</div>
+
+
   </body>
 
 </html>
